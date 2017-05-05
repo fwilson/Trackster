@@ -2,6 +2,9 @@
 
 html {
   font-size: 16px;
+}
+
+input, div, a, span {
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -31,7 +34,7 @@ input {
   color: rgb(191, 191, 191);
 }
 
-i {
+.search-btn {
   background-color: rgb(255, 102, 204);
   height: 2.75rem;
   padding: 0.5rem;
@@ -39,4 +42,47 @@ i {
   text-align: center;
   border-radius: 10px;
   vertical-align: baseline;
+}
+
+/*Results Table Header*/
+
+.labels {
+  background-color: rgb(104, 0, 255);
+}
+
+.label {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+#track {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+/*Results Table*/
+
+.results {
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.result div {
+  color: rgb(74, 74, 74);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.play-track {
+  text-align: right;
+}
+
+.play-track span {
+  padding-right: 1rem;
+}
+
+.play-btn {
+  color: rgb(255, 102, 204);
+  margin-right: 3rem;
 }

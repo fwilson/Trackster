@@ -34,6 +34,10 @@ input {
   color: rgb(191, 191, 191);
 }
 
+input:focus {
+  color: rgb(74, 74, 74);
+}
+
 .search-btn {
   background-color: rgb(255, 102, 204);
   height: 2.75rem;
@@ -42,6 +46,10 @@ input {
   text-align: center;
   border-radius: 10px;
   vertical-align: baseline;
+}
+
+.search-btn:hover {
+  background-color: rgb(255, 0, 171);
 }
 
 /*Results Table Header*/
@@ -64,8 +72,12 @@ input {
 
 /*Results Table*/
 
-.results {
+.result {
   border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.result:hover {
+  background-color: rgb(239, 237, 242);
 }
 
 .result div {

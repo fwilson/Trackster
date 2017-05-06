@@ -7,7 +7,9 @@ $(document).ready(function () {
     Append each "row" to the container in the body to display all tracks.
   */
   Trackster.renderTracks = function(tracks) {
-      for (var i = 0; i = tracks.length; i++) {
+      $('.results').empty();
+
+      for (var i = 0; i < tracks.length; i++) {
         var track = tracks[i];
         var trackData =
           '<div class="row result">' +
@@ -29,7 +31,7 @@ $(document).ready(function () {
     Given a search term as a string, query the Spotify API.
     Render the tracks given in the API query response.
   */
-  Trackster.searchTracksByTitle = function(title) {
+  Trackster.searchTracksByTitle = function (title) {
     var url = 'https://api.spotify.com/v1/search?type=track&q='+title;
     $.ajax({
       url: url,
@@ -46,5 +48,13 @@ $(document).ready(function () {
   $('.search-btn').click(function () {
     Trackster.searchTracksByTitle($('.search-input').val());
   })
+
+  /*Enter in Search Functionality*/
+
+  $('input').keypress(function(e) {
+    if(e.which == 13) {
+        Trackster.searchTracksByTitle($('.search-input').val());
+    }
+  });
 
 })
